@@ -1,0 +1,4 @@
+I have an public domain idea to implement a fix to public domain cryptographic signature algorithms by encrypting the data with a private key,
+decrypting it with a public key, checking if say, the first 512 bits are all 0's, and if they are, then there is a 1 in 2^512 chance that it
+could be brute-forced successfully. The 512 bits could be added at a fixed place in the file, such as at the very beginning. It can be greater
+or fewer bits, but it is a fix to hash collisions.
