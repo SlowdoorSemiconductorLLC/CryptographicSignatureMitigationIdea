@@ -1,4 +1,1 @@
-I have an public domain idea to implement a fix to public domain cryptographic signature algorithms by encrypting the data with a private key,
-decrypting it with a public key, checking if say, the first 512 bits are all 0's, and if they are, then there is a 1 in 2^512 chance that it
-could be brute-forced successfully. The 512 bits could be added at a fixed place in the file, such as at the very beginning. It can be greater
-or fewer bits, but it is a fix to hash collisions.
+The idea is to add 2048 bits (more or fewer could be added or removed) to the beginning of a file. All 2048 of those bits are 0's. Then, encrypt it with a private key. When decrypted with the right public key, all of the first 2048 bits are 0's, as well as the rest of the plaintext. If decrypting using the wrong public key or decrypting with the right public key the plaintext data that has been encrypted with a private key that doesn't produce that public key, there is a 1 in 22048 chance of the first 2048 bits being all 0's.
